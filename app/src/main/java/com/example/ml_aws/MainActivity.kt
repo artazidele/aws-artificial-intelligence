@@ -30,14 +30,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         translateBtn.setOnClickListener {
-            val text = "I like to eat spaghetti"
+            val text = "I have a dog."
             translateText(text)
         }
     }
 
     // Funkcija teksta pārvēršanai uz runu
     private fun convertTextToSpeech() {
-        Amplify.Predictions.convertTextToSpeech("I like to eat spaghetti!",
+        Amplify.Predictions.convertTextToSpeech("I have a dog.",
             {
                 textV.text = "Text is converted to speech."
                 playAudio(it.audioData)

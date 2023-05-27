@@ -18,6 +18,7 @@ class AwsMlApplication: Application() {
             Amplify.addPlugin(AWSPredictionsPlugin())
 
             // Amplify inicializēšana
+            Amplify.configure(applicationContext)
             Log.i("MyAmplifyApp", "Initialized Amplify")
         } catch (error: AmplifyException) {
             Log.e("MyAmplifyApp", "Could not initialize Amplify", error)
